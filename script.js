@@ -1,50 +1,27 @@
-// Generates a random number between 1 and 100
-
-
 let getComputerChoice
 let humanScore = 0
 let computerScore = 0
-//let getHumanChoice = "Rock";
-let round = 1
 
-console.log(round)
+x = 1;
 
-//if (getComputerChoice != null && getHumanChoice.length !== 0) {
-   // 
-   //console.log(getHumanChoice);
-  // console.log(HumanScoreLowerCase)
-
-//console.log(randomNumber)
-
-// function computerChoice() {
-//    if (randomNumber < 33) {
-//    getComputerChoice="rock"
-//    
-// }  else if (randomNumber <66) {
-//    getComputerChoice="paper"
-//    } else {
-//        getComputerChoice="scissors"
- //   }
-// }
 
 function humanChoice() {
     
 return humanChoiceLowerCase
 }
-
-//console.log(getComputerChoice)
-//console.log(getHumanChoice.toLowerCase());
+round = 1
 
 function playRound() {
 
+    roundNum = round; 
     console.log ("Round " + round + " is starting now: ")
     let getHumanChoice = prompt("Type rock, paper or scissors to play");
-let humanChoiceLowerCase = (getHumanChoice.toLowerCase());
+    let humanChoiceLowerCase = (getHumanChoice.toLowerCase());
     let randomNumber = Math.floor((Math.random() * 100 )+ 1);
+    
     if (randomNumber < 33) {
     getComputerChoice="rock"
-    
- }  else if (randomNumber <66) {
+    }  else if (randomNumber <66) {
     getComputerChoice="paper"
     } else {
         getComputerChoice="scissors"
@@ -81,23 +58,23 @@ if (getComputerChoice ===  humanChoiceLowerCase){
     console.log("Your score is " + humanScore)
 console.log("The ghost in the machine's score is " + computerScore) 
 console.log("Round " + round + " of 5 is over.")
-round = round++;
+round = ++round;
 }
 
 
-//function playGame () {
-//    if (round==5 && (humanScore < computerScore)) {
-//        console.log("Game over. You win!")
-//    } else if (round=5 && (computerScore < humanScore)) { 
-//        "Game over. The ghost in the machine wins this game."
-//    } else {
-//        playRound ();
-//        return humanScore
-//        return computerScore
-//    }}
-
 for (let round = 1; round <6; round++) {
-
+let round 
 playRound ();
+round = 1;
+round = ++round;
 
+}
+
+
+if (humanScore > computerScore) {
+    console.log("Game over! You win!")
+} else if (humanScore < computerScore) {
+    console.log("Game over. You lose!")
+} else {
+    console.log("It's a draw. What are the chances!")
 }
